@@ -60,7 +60,7 @@ public class ResourcesService {
         List<LinkInfo> linkInfos = linkInfoRepository.findAllByCourseIds(courseIds);
         List<ResourceResponse> resourceResponses = linkInfos.stream().map(linkInfo -> {
 
-            return new ResourceResponse(linkInfo.getId(),linkInfo.getCourses().getCourseType(),linkInfo.getLink(),linkInfo.getAverageRating(),linkInfo.getAddedBy());
+            return new ResourceResponse(linkInfo.getId(),linkInfo.getCourses().getCourseType(),linkInfo.getLink(),linkInfo.getAddedBy());
 
         }).collect(Collectors.toList());
 
@@ -92,7 +92,7 @@ public class ResourcesService {
         }
 
         LinkInfo linkInfo1 = new LinkInfo();
-        linkInfo1.getCourses().setId(courses.getId());
+        linkInfo1.setCourses(courses);
         linkInfo1.setAddedBy(email);
         linkInfo1.setLink(requestResource.getLink());
         linkInfoRepository.save(linkInfo1);

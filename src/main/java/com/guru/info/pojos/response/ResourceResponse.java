@@ -13,6 +13,5 @@ public class ResourceResponse {
     private int linkId;
     private String course;
     private String link;
-    private float averageRating;
     private String addedBy;
 }

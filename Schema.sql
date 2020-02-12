@@ -18,8 +18,6 @@ CREATE TABLE `guru`.`courses` (
   `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modified_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `added_by` VARCHAR(45) NOT NULL,
-  `average_rating` FLOAT NOT NULL DEFAULT '5',
-  `rated_count` INT(11) NOT NULL,
   PRIMARY KEY (`id`));
 
   CREATE TABLE `guru`.`roles` (

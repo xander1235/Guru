@@ -25,19 +25,11 @@ public class LinkInfo implements Serializable {
     @Column(name = "id")
     private int id;
 
-
     @Column(name = "link")
     private String link;
 
     @Column(name = "added_by")
     private String addedBy;
-
-    @Column(name = "average_rating",columnDefinition = "float default 5.0")
-    private float averageRating;
-
-
-    @Column(name = "rated_count", columnDefinition = "int default 1")
-    private int ratedCount;
 
     @UpdateTimestamp
     @Column(name = "modified_at")

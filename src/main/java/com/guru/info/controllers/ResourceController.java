@@ -4,7 +4,6 @@ import com.guru.info.exceptions.ForbiddenException;
 import com.guru.info.pojos.request.RequestResource;
 import com.guru.info.pojos.response.ResourcesResponse;
 import com.guru.info.services.ResourcesService;
-import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 
-@Slf4j
 @RestController
 @RequestMapping("resources/")
 public class ResourceController {
@@ -45,7 +43,6 @@ public class ResourceController {
     }
 
     public void checkApiToken(String token){
-        log.info("\n\n\n\n" + token +"\n\n\n\n" + apiToken);
         if(!token.equals(apiToken)){
             throw new ForbiddenException("Access denied. Please check your api token.");
         }
