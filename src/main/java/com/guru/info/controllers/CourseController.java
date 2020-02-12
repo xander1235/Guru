@@ -20,9 +20,9 @@ public class CourseController {
         return courseService.getCourses();
     }
 
-    @PostMapping(value = "add/course/{courseType}")
-    public String addCourse(@PathVariable String courseType){
-        return courseService.addCourse(courseType);
+    @PostMapping(value = "add/course/{roleType}/{courseType}")
+    public String addCourse(@PathVariable String roleType, @PathVariable String courseType){
+        return courseService.addCourse(roleType,courseType);
     }
 
     @PostMapping(value = "update/course/{id}/{courseType}")
